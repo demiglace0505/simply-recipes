@@ -9,7 +9,7 @@ const Testing = props => {
   console.log(props.data)
   ...
 }
-
+ 
 export const data = graphql`
   ...
 `
