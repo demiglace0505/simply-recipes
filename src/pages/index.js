@@ -21,7 +21,7 @@ const index = () => {
           />
           <div className="hero-container">
             <div className="hero-text">
-              <h1>Simply Recipes</h1>
+              <h1>Test</h1>
               <h4>Nice and simple recipes available to you blazing fast</h4>
             </div>
           </div>

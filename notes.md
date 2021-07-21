@@ -404,3 +404,7 @@ const query = graphql`
   }
 `
 ```
+
+### Deployment
+
+There are two methods for deployment: the first is locally by utilizing gatsby build and the other is through Git and continuous deployment. With the first option, we simply upload the generated public folder from gatsby build into netlify. The second is by connecting a git repo to netlify. We can add environment variables to netlify by
