@@ -370,3 +370,37 @@ The tag variable can be accessed in the tag-template.js's props via the **pageCo
 ### Fonts
 
 Preloading fonts can be done by making use of gatsby-plugin-webfont
+
+### Forms
+
+Since we ship our assets as static assets in Gatsby, there are two options for handling forms. First is by building our own server and second is by making use of a third party service. Formspree is a good, straightforward service for this.
+
+### SEO
+
+The plugin gatsby-plugin-react-helmet can be used to inject meta attributes to the head tag. The metadata we included in gatsby-config.js can be pulled in using graphQL. We can also conditionally render such that when no description is hardcoded to the SEO component, we will make use of the description from gatsby-config.js with the use of the graphQL query.
+
+```
+const SEO = ({ title, description }) => {
+  const { site } = useStaticQuery(query)
+  const metaDescription = description || site.siteMetadata.description
+  // console.log(site)
+  return (
+    <Helmet
+      htmlAttributes={{ lang: "en" }}
+      title={`${title} | ${site.siteMetadata.title}`}
+      meta={[{ name: `description`, content: metaDescription }]}
+    ></Helmet>
+  )
+}
+
+const query = graphql`
+  {
+    site {
+      siteMetadata {
+        title
+        description
+      }
+    }
+  }
+`
+```

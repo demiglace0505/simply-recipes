@@ -3,12 +3,14 @@ import { graphql } from "gatsby"
 
 import RecipesList from "../components/RecipesList"
 import Layout from "../components/Layout"
+import SEO from "../components/SEO"
 
 const TagTemplate = props => {
   console.log(props)
   const recipes = props.data.allContentfulRecipe.nodes
   return (
     <Layout>
+      <SEO title={props.pageContext.tag} />
       <main className="page">
         <h2>{props.pageContext.tag}</h2>
         <div className="tag-recipes">

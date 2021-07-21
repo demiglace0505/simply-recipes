@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import slugify from "slugify"
 
+import SEO from "../components/SEO"
 import Layout from "../components/Layout"
 import setupTags from "../utils/setupTags"
 
@@ -10,6 +11,7 @@ const Tags = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title="Tags" />
       <main className="page">
         <section className="tags-page">
           {tags.map((t, index) => {

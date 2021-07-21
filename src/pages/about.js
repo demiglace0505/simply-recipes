@@ -2,6 +2,7 @@ import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link, graphql } from "gatsby"
 
+import SEO from "../components/SEO"
 import Layout from "../components/Layout"
 import RecipesList from "../components/RecipesList"
 
@@ -9,6 +10,7 @@ const About = ({ data }) => {
   console.log(data)
   return (
     <Layout>
+      <SEO title="About" />
       <main className="page">
         <section className="about-page">
           <article>

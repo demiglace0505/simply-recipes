@@ -15,9 +15,9 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  console.log("#######")
-  console.log(result)
-  console.log("#######")
+  // console.log("#######")
+  // console.log(result)
+  // console.log("#######")
 
   // iterate over each node (recipe), then drill in to each recipe to access tag
   result.data.allContentfulRecipe.nodes.forEach(recipe => {

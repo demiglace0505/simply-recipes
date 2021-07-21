@@ -55,6 +55,7 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_API_KEY,
       },
     },
+    `gatsby-plugin-react-helmet`,
     // {
     //   resolve: `gatsby-plugin-webfonts`,
     //   options: {

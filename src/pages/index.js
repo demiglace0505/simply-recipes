@@ -2,12 +2,14 @@ import React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
+import SEO from "../components/SEO"
 import AllRecipes from "../components/AllRecipes"
 import Layout from "../components/Layout"
 
 const index = () => {
   return (
     <Layout>
+      <SEO title="Home" description="test" />
       <main className="page">
         <header className="hero">
           <StaticImage
@@ -20,7 +22,7 @@ const index = () => {
           <div className="hero-container">
             <div className="hero-text">
               <h1>Simply Recipes</h1>
-              <h4>Recipes as easy as it gets</h4>
+              <h4>Nice and simple recipes available to you blazing fast</h4>
             </div>
           </div>
         </header>
